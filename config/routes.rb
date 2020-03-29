@@ -3,5 +3,5 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :volunteers, only: %i[new create]
+  resources :volunteers, only: %i[index new create]
 end

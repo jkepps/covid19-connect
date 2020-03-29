@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 
 class VolunteersController < ApplicationController
+  def index
+    @professions = Profession.all.map { |p| [p.title, p.id] }.unshift ['Select a Profession', nil]
+    @volunteers = Volunteer.all
+    if zip_result.present? && query_params[:profession_id].present?
+      @volunteers = @volunteers.joins(:profession).where('professions.id = ?', query_params[:profession_id])
+      @volunteers = @volunteers.near([zip_result.latitude, zip_result.longitude], 5)
+    else
+      @volunteers = @volunteers.none
+    end
+  end
+
   def new
     @volunteer = Volunteer.new
     @professions = Profession.all
@@ -16,6 +27,14 @@ class VolunteersController < ApplicationController
   end
 
   private
+
+  def query_params
+    params.permit(:zip, :profession_id)
+  end
+
+  def zip_result
+    @zip_result ||= Geocoder.search(query_params[:zip]).first
+  end
 
   def volunteer_params
     p = params.require(:volunteer).permit(

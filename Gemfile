@@ -25,13 +25,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.4.1'
+gem 'geocoder'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'phonelib'
 
 group :development, :test do
   gem 'factory_bot_rails'
-  gem 'ffaker'
+  gem 'faker'
   gem 'pry'
   gem 'rspec-rails'
 end

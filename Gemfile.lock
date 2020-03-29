@@ -78,8 +78,10 @@ GEM
     factory_bot_rails (5.1.1)
       factory_bot (~> 5.1.0)
       railties (>= 4.2.0)
-    ffaker (2.12.0)
+    faker (2.11.0)
+      i18n (>= 1.6, < 2)
     ffi (1.12.2)
+    geocoder (1.6.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.1.2)
@@ -241,7 +243,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.4.1)
   factory_bot_rails
-  ffaker
+  faker
+  geocoder
   haml-rails
   jbuilder (~> 2.7)
   jquery-rails

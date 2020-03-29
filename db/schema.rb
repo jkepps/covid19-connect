@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2020_03_29_015113) do
     t.bigint "profession_id"
     t.string "zip", null: false
     t.string "phone", null: false
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["profession_id"], name: "index_volunteers_on_profession_id"
