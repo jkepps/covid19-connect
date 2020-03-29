@@ -46,6 +46,7 @@ class VolunteersController < ApplicationController
       license: %i[active number full_name expiration_date state]
     )
     p[:license_attributes] = p.delete(:license)
+    p[:phone] = "+1#{p[:phone].gsub('-', '')}"
     p
   end
 
