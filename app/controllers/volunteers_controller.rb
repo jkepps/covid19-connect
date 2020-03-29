@@ -6,7 +6,7 @@ class VolunteersController < ApplicationController
     @volunteers = Volunteer.all
     if zip_result.present? && query_params[:profession_id].present?
       @volunteers = @volunteers.joins(:profession).where('professions.id = ?', query_params[:profession_id])
-      @volunteers = @volunteers.near([zip_result.latitude, zip_result.longitude], 5)
+      @volunteers = @volunteers.near([zip_result.latitude, zip_result.longitude], 50)
     else
       @volunteers = @volunteers.none
     end

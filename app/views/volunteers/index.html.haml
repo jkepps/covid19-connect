@@ -1,9 +1,9 @@
 .volunteers
   .container-fluid.volunteers__container
-    .volunteers__filters.jumbotron
+    .volunteers__filters.jumbotron.p-4
       = form_tag(volunteers_path, method: :get) do
-        = text_field_tag :zip, params[:zip], class: 'form-control', placeholder: 'Zip Code'
-        = select_tag :profession_id, options_for_select(@professions), class: 'form-control'
+        = text_field_tag :zip, params[:zip], class: 'form-control mb-3', placeholder: 'Zip Code'
+        = select_tag :profession_id, options_for_select(@professions), class: 'form-control mb-3'
         = submit_tag 'Search', name: nil, class: 'btn btn-secondary'
     %table.volunteers__results-table.table
       %thead
