@@ -1,5 +1,5 @@
 .welcome__container
-  %span.welcome__option.welcome__option--volunteer.mr-5
+  = link_to new_volunteer_path, class: 'welcome__option welcome__option--volunteer mr-5' do
     Want to Volunteer?
-  %span.welcome__option.welcome__option--provider
+  = link_to '#', class: 'welcome__option welcome__option--provider' do
     Looking for Volunteers?

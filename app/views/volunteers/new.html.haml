@@ -1,0 +1,37 @@
+.volunteer-form
+  = form_with model: @volunteer do |f|
+    .form-group
+      = f.label "Name:"
+      = f.text_field :name
+    .form-group
+      = f.label "Zip Code:"
+      = f.text_field :zip
+    .form-group
+      = f.label "Profession:"
+      = f.select :profession_id do
+        = @professions.each do |profession|
+          = content_tag :option, profession.title, value: profession.id
+    .form-group
+      = f.label "Is your license currently active?"
+      = f.label 'license[active]' do
+        Yes
+        = f.radio_button 'license[active]', true
+        No
+        = f.radio_button 'license[active]', false
+      .form-group
+        = f.label "If your license is currently inactive, when did your license expire?"
+        = f.date_field 'license[expiration_date]'
+      .form-group
+        = f.label "License Number"
+        = f.text_field 'license[number]'
+      .form-group
+        = f.label "Name as it appears on license"
+        = f.text_field 'license[full_name]'
+      .form-group
+        = f.label "In which state is your license active? (Two-letter abbreviation)"
+        = f.text_field 'license[state]'
+      .form-group
+        = f.label "What's the best phone number to reach you at via text?"
+        = f.text_field :phone, type: :phone
+    .submit
+      = f.submit "Submit", class: 'btn btn-primary mt-3'

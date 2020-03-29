@@ -8,4 +8,6 @@ class Volunteer < ApplicationRecord
   validates :profession, presence: true
   validates :zip, presence: true
   validates :phone, phone: { possible: true, countries: :us, allow_blank: false }
+
+  accepts_nested_attributes_for :license
 end
