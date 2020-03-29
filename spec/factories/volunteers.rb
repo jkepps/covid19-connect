@@ -5,6 +5,6 @@ FactoryBot.define do
     name { 'Volunteer' }
     profession
     zip { '12345' }
-    phone { '15555555555' }
+    phone { "+1#{Faker::PhoneNumber.cell_phone}" }
   end
 end

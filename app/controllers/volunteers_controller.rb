@@ -21,6 +21,7 @@ class VolunteersController < ApplicationController
     @volunteer = Volunteer.new(volunteer_params)
     if @volunteer.save
       redirect_to :root, notice: 'You successfully submitted. You should receive a confirmation text message shortly'
+      send_welcome_sms
     else
       redirect_to new_volunteer_path, alert: @volunteer.errors.full_messages.to_sentence
     end
@@ -46,5 +47,14 @@ class VolunteersController < ApplicationController
     )
     p[:license_attributes] = p.delete(:license)
     p
+  end
+
+  def send_welcome_sms
+    client = Twilio::REST::Client.new
+    client.messages.create(
+      body: "You've been entered. This is the number you will be receiving notifications from. Text STOP at anytime to be removed from this service.",
+      to: @volunteer.phone,
+      from: Rails.application.credentials.dig(:twilio, :phone_number)
+    )
   end
 end

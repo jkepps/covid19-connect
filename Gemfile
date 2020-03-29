@@ -29,6 +29,7 @@ gem 'geocoder'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'phonelib'
+gem 'twilio-ruby', '~> 5.32.0'
 
 group :development, :test do
   gem 'factory_bot_rails'
@@ -48,6 +49,8 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

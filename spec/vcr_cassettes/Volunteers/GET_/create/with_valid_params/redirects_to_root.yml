@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=12345
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Mar 2020 19:31:39 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjIzNjU4MDE5NiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczovL29zbS5vcmcvY29weXJpZ2h0IiwiYm91bmRpbmdib3giOlsiMjQuMzY2Nzk3IiwiMjQuMzY2ODk3IiwiNTQuNTEwMzU5NSIsIjU0LjUxMDQ1OTUiXSwibGF0IjoiMjQuMzY2ODQ3IiwibG9uIjoiNTQuNTEwNDA5NSIsImRpc3BsYXlfbmFtZSI6Ik11c2FmZmFoIEluZHVzdHJpYWwgQXJlYSwgQWJ1IERoYWJpLCAxMjM0NSwgVW5pdGVkIEFyYWIgRW1pcmF0ZXMiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwiaW1wb3J0YW5jZSI6MC4zMzQ5OTk5OTk5OTk5OTk5NiwiYWRkcmVzcyI6eyJzdWJ1cmIiOiJNdXNhZmZhaCBJbmR1c3RyaWFsIEFyZWEiLCJjaXR5IjoiQWJ1IERoYWJpIiwic3RhdGUiOiJBYnUgRGhhYmkiLCJwb3N0Y29kZSI6IjEyMzQ1IiwiY291bnRyeSI6IlVuaXRlZCBBcmFiIEVtaXJhdGVzIiwiY291bnRyeV9jb2RlIjoiYWUifX0seyJwbGFjZV9pZCI6MjM2NzA0NTI3LCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJib3VuZGluZ2JveCI6WyI2LjE5MzYzMzgiLCI2LjE5MzczMzgiLCItNzUuNTc5OSIsIi03NS41Nzk4Il0sImxhdCI6IjYuMTkzNjgzOCIsImxvbiI6Ii03NS41Nzk4NSIsImRpc3BsYXlfbmFtZSI6IkNvbXVuYSAxNCAtIEVsIFBvYmxhZG8sIFpvbmEgVXJiYW5hIE1lZGVsbMOtbiwgTWVkZWxsw61uLCBWYWxsZSBkZSBBYnVycsOhLCBBbnRpb3F1aWEsIDEyMzQ1LCBDb2xvbWJpYSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoicG9zdGNvZGUiLCJpbXBvcnRhbmNlIjowLjMzNDk5OTk5OTk5OTk5OTk2LCJhZGRyZXNzIjp7ImNpdHkiOiJNZWRlbGzDrW4iLCJjb3VudHkiOiJab25hIFVyYmFuYSBNZWRlbGzDrW4iLCJzdGF0ZV9kaXN0cmljdCI6IlZhbGxlIGRlIEFidXJyw6EiLCJzdGF0ZSI6IkFudGlvcXVpYSIsInBvc3Rjb2RlIjoiMTIzNDUiLCJjb3VudHJ5IjoiQ29sb21iaWEiLCJjb3VudHJ5X2NvZGUiOiJjbyJ9fSx7InBsYWNlX2lkIjoyMzc2MDMyNDIsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6Ly9vc20ub3JnL2NvcHlyaWdodCIsImJvdW5kaW5nYm94IjpbIjMxLjc2ODE0OTgiLCIzMS43NjgyNDk4IiwiMzUuMjY3NzMwOSIsIjM1LjI2NzgzMDkiXSwibGF0IjoiMzEuNzY4MTk5OCIsImxvbiI6IjM1LjI2Nzc4MDkiLCJkaXNwbGF5X25hbWUiOiJhbC1FaXphcml5YSwgQXJlYSBCLCBKdWRlYSBhbmQgU2FtYXJpYSwgMTIzNDUsIFBhbGVzdGluaWFuIFRlcnJpdG9yeSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoicG9zdGNvZGUiLCJpbXBvcnRhbmNlIjowLjMzNDk5OTk5OTk5OTk5OTk2LCJhZGRyZXNzIjp7InZpbGxhZ2UiOiJhbC1FaXphcml5YSIsInN0YXRlX2Rpc3RyaWN0IjoiQXJlYSBCIiwic3RhdGUiOiJKdWRlYSBhbmQgU2FtYXJpYSIsInBvc3Rjb2RlIjoiMTIzNDUiLCJjb3VudHJ5IjoiUGFsZXN0aW5pYW4gVGVycml0b3J5IiwiY291bnRyeV9jb2RlIjoicHMifX0seyJwbGFjZV9pZCI6MjM3NTgyMDg5LCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJib3VuZGluZ2JveCI6WyIyNy4wMzIxMzI0NiIsIjI3LjAzMjIzMjQ2IiwiODYuMTA3NDE5IiwiODYuMTA3NTE5Il0sImxhdCI6IjI3LjAzMjE4MjQ2IiwibG9uIjoiODYuMTA3NDY5IiwiZGlzcGxheV9uYW1lIjoiSGFydHBhdGUsIER1ZGhvdWxpLCBTaW5kaHVsaSwgQmFnbWF0aSBQcmFkZXNoLCAxMjM0NSwgTmVwYWwiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwiaW1wb3J0YW5jZSI6MC4zMzQ5OTk5OTk5OTk5OTk5NiwiYWRkcmVzcyI6eyJjaXR5IjoiSGFydHBhdGUiLCJjb3VudHkiOiJEdWRob3VsaSIsInN0YXRlIjoiQmFnbWF0aSBQcmFkZXNoIiwicG9zdGNvZGUiOiIxMjM0NSIsImNvdW50cnkiOiJOZXBhbCIsImNvdW50cnlfY29kZSI6Im5wIn19LHsicGxhY2VfaWQiOjIzNjU5NTUxNywibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczovL29zbS5vcmcvY29weXJpZ2h0IiwiYm91bmRpbmdib3giOlsiLTE3Ljk0MDQ0NTkiLCItMTcuOTQwMzQ1OSIsIi02Ny4xMTAyNzIzIiwiLTY3LjExMDE3MjMiXSwibGF0IjoiLTE3Ljk0MDM5NTkiLCJsb24iOiItNjcuMTEwMjIyMyIsImRpc3BsYXlfbmFtZSI6Ik11bmljaXBpbyBPcnVybywgUHJvdmluY2lhIENlcmNhZG8sIE9ydXJvLCAxMjM0NSwgQm9saXZpYSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoicG9zdGNvZGUiLCJpbXBvcnRhbmNlIjowLjMzNDk5OTk5OTk5OTk5OTk2LCJhZGRyZXNzIjp7ImNpdHkiOiJNdW5pY2lwaW8gT3J1cm8iLCJjb3VudHkiOiJQcm92aW5jaWEgQ2VyY2FkbyIsInN0YXRlIjoiT3J1cm8iLCJwb3N0Y29kZSI6IjEyMzQ1IiwiY291bnRyeSI6IkJvbGl2aWEiLCJjb3VudHJ5X2NvZGUiOiJibyJ9fSx7InBsYWNlX2lkIjoyMzY3MDYxODUsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6Ly9vc20ub3JnL2NvcHlyaWdodCIsImJvdW5kaW5nYm94IjpbIjM1LjE5ODU3NDIiLCIzNS4xOTg2NzQyIiwiMzIuOTg4OTUyIiwiMzIuOTg5MDUyIl0sImxhdCI6IjM1LjE5ODYyNDIiLCJsb24iOiIzMi45ODkwMDIiLCJkaXNwbGF5X25hbWUiOiJHdXplbHl1cnQsIEfDvHplbHl1cnQsIE5pY29zaWEsIE5vcnRoZXJuIEN5cHJ1cywgMTIzNDUsIEN5cHJ1cyIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoicG9zdGNvZGUiLCJpbXBvcnRhbmNlIjowLjMzNDk5OTk5OTk5OTk5OTk2LCJhZGRyZXNzIjp7InRvd24iOiJHdXplbHl1cnQiLCJjb3VudHkiOiJHw7x6ZWx5dXJ0Iiwic3RhdGVfZGlzdHJpY3QiOiJOaWNvc2lhIiwic3RhdGUiOiJOb3J0aGVybiBDeXBydXMiLCJwb3N0Y29kZSI6IjEyMzQ1IiwiY291bnRyeSI6IkN5cHJ1cyIsImNvdW50cnlfY29kZSI6ImN5In19LHsicGxhY2VfaWQiOjIzNzA5Mzk0MCwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczovL29zbS5vcmcvY29weXJpZ2h0IiwiYm91bmRpbmdib3giOlsiNi42NTE0NzM1IiwiNi42NTE1NzM1IiwiODAuNjk4MDU2NyIsIjgwLjY5ODE1NjciXSwibGF0IjoiNi42NTE1MjM1IiwibG9uIjoiODAuNjk4MTA2NyIsImRpc3BsYXlfbmFtZSI6IlJhdG5hcHVyYSBEaXN0cmljdCwgU2FiYXJhZ2FtdXdhIFByb3ZpbmNlLCAxMjM0NSwgU3JpIExhbmthIiwiY2xhc3MiOiJwbGFjZSIsInR5cGUiOiJwb3N0Y29kZSIsImltcG9ydGFuY2UiOjAuMzM0OTk5OTk5OTk5OTk5OTYsImFkZHJlc3MiOnsic3RhdGVfZGlzdHJpY3QiOiJSYXRuYXB1cmEgRGlzdHJpY3QiLCJzdGF0ZSI6IlNhYmFyYWdhbXV3YSBQcm92aW5jZSIsInBvc3Rjb2RlIjoiMTIzNDUiLCJjb3VudHJ5IjoiU3JpIExhbmthIiwiY291bnRyeV9jb2RlIjoibGsifX0seyJwbGFjZV9pZCI6MjM2NTkxODc4LCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJib3VuZGluZ2JveCI6WyIzOC43MTM1Njk2NjY2NjciLCIzOC43MTM2Njk2NjY2NjciLCI0OC41NTI3MzU1MzMzMzMiLCI0OC41NTI4MzU1MzMzMzMiXSwibGF0IjoiMzguNzEzNjE5NjY2NjY2NjY2IiwibG9uIjoiNDguNTUyNzg1NTMzMzMzMzMiLCJkaXNwbGF5X25hbWUiOiJUaWvJmWLJmW5kLCBBeHVuYWhpcmFuLCBMZXJpayBEaXN0cmljdCwgMTIzNDUsIEF6ZXJiYWlqYW4iLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwiaW1wb3J0YW5jZSI6MC4zMzQ5OTk5OTk5OTk5OTk5NiwiYWRkcmVzcyI6eyJoYW1sZXQiOiJUaWvJmWLJmW5kIiwidmlsbGFnZSI6IkF4dW5haGlyYW4iLCJzdGF0ZSI6IkxlcmlrIERpc3RyaWN0IiwicG9zdGNvZGUiOiIxMjM0NSIsImNvdW50cnkiOiJBemVyYmFpamFuIiwiY291bnRyeV9jb2RlIjoiYXoifX0seyJwbGFjZV9pZCI6MjM3MDg4MTU0LCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJib3VuZGluZ2JveCI6WyI0Mi40ODQ4NDEzIiwiNDIuNDg0OTQxMyIsIjc4LjM5NjM0MjIiLCI3OC4zOTY0NDIyIl0sImxhdCI6IjQyLjQ4NDg5MTMiLCJsb24iOiI3OC4zOTYzOTIyIiwiZGlzcGxheV9uYW1lIjoiS2FyYWtvbCwgSXNzeWstS3VsIFJlZ2lvbiwgMTIzNDUsIEt5cmd5enN0YW4iLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwiaW1wb3J0YW5jZSI6MC4zMzQ5OTk5OTk5OTk5OTk5NiwiYWRkcmVzcyI6eyJjaXR5IjoiS2FyYWtvbCIsInN0YXRlIjoiSXNzeWstS3VsIFJlZ2lvbiIsInBvc3Rjb2RlIjoiMTIzNDUiLCJjb3VudHJ5IjoiS3lyZ3l6c3RhbiIsImNvdW50cnlfY29kZSI6ImtnIn19LHsicGxhY2VfaWQiOjIzNzYxNTA2NywibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczovL29zbS5vcmcvY29weXJpZ2h0IiwiYm91bmRpbmdib3giOlsiLTI1LjIyMTk5OTk1ODk4OSIsIi0yNS4yMjE4OTk5NTg5ODkiLCItNTcuNTUyOTE5OTA5ODY0IiwiLTU3LjU1MjgxOTkwOTg2NCJdLCJsYXQiOiItMjUuMjIxOTQ5OTU4OTg5MiIsImxvbiI6Ii01Ny41NTI4Njk5MDk4NjQ0NCIsImRpc3BsYXlfbmFtZSI6Ik1hcmlhbm8gUm9xdWUgQWxvbnNvLCBDZW50cmFsLCBSZWdpw7NuIE9yaWVudGFsLCAxMjM0NSwgUGFyYWd1YXkiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6InBvc3Rjb2RlIiwiaW1wb3J0YW5jZSI6MC4zMzQ5OTk5OTk5OTk5OTk5NiwiYWRkcmVzcyI6eyJjaXR5IjoiTWFyaWFubyBSb3F1ZSBBbG9uc28iLCJzdGF0ZSI6IkNlbnRyYWwiLCJwb3N0Y29kZSI6IjEyMzQ1IiwiY291bnRyeSI6IlBhcmFndWF5IiwiY291bnRyeV9jb2RlIjoicHkifX1d
+    http_version: null
+  recorded_at: Sun, 29 Mar 2020 19:31:39 GMT
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/ACf3a6506aaa885bb0f1bb22772b6a893e/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=You%27ve+been+entered.+This+is+the+number+you+will+be+receiving+notifications+from.+Text+STOP+at+anytime+to+be+removed+from+this+service.&From=15005550006&To=%2B11-527-381-2187
+    headers:
+      User-Agent:
+      - twilio-ruby/5.32.0 (ruby/x86_64-darwin19 2.6.4-p104)
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNmM2E2NTA2YWFhODg1YmIwZjFiYjIyNzcyYjZhODkzZTo3Mzg5ZGQ1YWI1MjA0ZTI3OGM0ODA3ZDZmNGIwOTEyOQ==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Date:
+      - Sun, 29 Mar 2020 19:31:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '898'
+      Connection:
+      - keep-alive
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Id:
+      - RQ5c8165f31d4f4a8482d4c34b20d03781
+      Twilio-Request-Duration:
+      - '0.037'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      X-Home-Region:
+      - us1
+      X-Api-Domain:
+      - api.twilio.com
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM5f3ab3e29e90415a8fbe9fa9088a4e8a", "date_created": "Sun,
+        29 Mar 2020 19:31:39 +0000", "date_updated": "Sun, 29 Mar 2020 19:31:39 +0000",
+        "date_sent": null, "account_sid": "ACf3a6506aaa885bb0f1bb22772b6a893e", "to":
+        "+15273812187", "from": "15005550006", "messaging_service_sid": null, "body":
+        "You''ve been entered. This is the number you will be receiving notifications
+        from. Text STOP at anytime to be removed from this service.", "status": "queued",
+        "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version":
+        "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message":
+        null, "uri": "/2010-04-01/Accounts/ACf3a6506aaa885bb0f1bb22772b6a893e/Messages/SM5f3ab3e29e90415a8fbe9fa9088a4e8a.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACf3a6506aaa885bb0f1bb22772b6a893e/Messages/SM5f3ab3e29e90415a8fbe9fa9088a4e8a/Media.json"}}'
+    http_version: null
+  recorded_at: Sun, 29 Mar 2020 19:31:39 GMT
+recorded_with: VCR 5.1.0

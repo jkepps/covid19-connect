@@ -10,7 +10,7 @@ RSpec.describe 'Volunteers', type: :request do
     end
   end
 
-  describe 'GET /create' do
+  describe 'GET /create', :vcr do
     let(:profession) { FactoryBot.create(:profession) }
 
     context 'with valid params' do
@@ -19,7 +19,7 @@ RSpec.describe 'Volunteers', type: :request do
           name: 'New Volunteer',
           zip: '12345',
           profession_id: profession.id,
-          phone: '15555555555',
+          phone: "+1#{Faker::PhoneNumber.cell_phone}",
           license: {
             active: true,
             number: '12346689',
@@ -51,7 +51,7 @@ RSpec.describe 'Volunteers', type: :request do
           name: 'New Volunteer',
           zip: '12345',
           profession_id: profession.id,
-          phone: '15555555555',
+          phone: "+1#{Faker::PhoneNumber.cell_phone}",
           license: {
             active: true,
             number: '12346689',
