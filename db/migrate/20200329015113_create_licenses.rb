@@ -5,9 +5,9 @@ class CreateLicenses < ActiveRecord::Migration[6.0]
     create_table :licenses do |t|
       t.boolean :active, default: true
       t.date :expiration_date
-      t.string :number
-      t.string :full_name
-      t.string :state, limit: 2
+      t.string :number, null: false
+      t.string :full_name, null: false
+      t.string :state, limit: 2, null: false
       t.references :volunteer
 
       t.timestamps

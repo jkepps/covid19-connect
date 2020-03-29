@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2020_03_29_015113) do
   create_table "licenses", force: :cascade do |t|
     t.boolean "active", default: true
     t.date "expiration_date"
-    t.string "number"
-    t.string "full_name"
-    t.string "state", limit: 2
+    t.string "number", null: false
+    t.string "full_name", null: false
+    t.string "state", limit: 2, null: false
     t.bigint "volunteer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
