@@ -29,6 +29,8 @@ gem 'haml-rails'
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'ffaker'
   gem 'pry'
   gem 'rspec-rails'
 end
